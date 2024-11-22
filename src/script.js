@@ -12,6 +12,7 @@ import vertexShader from './shaders/objects/vertex.glsl'
 // start screen
 const startScreen = document.querySelector('.starting-screen')
 const startButton = document.querySelector('.start-button')
+const exitButton = document.getElementById('exit')
 
 // win screen
 const winScreen = document.querySelector('.win-screen')
@@ -71,6 +72,21 @@ startButton.addEventListener('click', function(){
     startTimer()
 })
 
+let isReset = false
+
+// exit button
+exitButton.addEventListener('click', () => {
+    winScreen.style.display = 'none'; // Hide win screen
+    startScreen.style.display = 'block'; // Show starting screen
+        sphereBody.position.set(0, 1, 0)
+        sphereBody.velocity.set(0, 0 ,0)
+        sphereBody.angularVelocity.set(0, 0, 0)
+        resetTimer()
+        
+        
+    
+})
+
 
 // Debug
 // const gui = new GUI({ width: 340 })
@@ -124,7 +140,7 @@ const defaultContactMaterial = new CANNON.ContactMaterial(
     defaultMaterial,
     defaultMaterial,
     {
-        friction: 0.9,
+        friction: 0.1,
         restitution: 1.0
     }
 )
@@ -387,7 +403,7 @@ const tick = () =>
 
 
     // Apply WASD movement
-    const force = 3;
+    const force = 5;
     // lowercase
     if (keys.w) sphereBody.applyForce(new CANNON.Vec3(0, 0, +force), sphereBody.position)
     if (keys.s) sphereBody.applyForce(new CANNON.Vec3(0, 0, -force), sphereBody.position)
@@ -405,7 +421,7 @@ const tick = () =>
     //death reset
     if (sphereBody.position.y < -20){
         sphereBody.position.set(0, 1, 0)
-        sphereBody.velocity.set(0, 0, 0)
+        sphereBody.velocity.set(0, 0 ,0)
         sphereBody.angularVelocity.set(0, 0, 0)
         resetTimer()
         startTimer()

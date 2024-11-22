@@ -136,13 +136,34 @@ h1 {
 /* Timer */
 .timer {
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    color: white; /* Text color */
-    font-size: 4rem; /* Font size */
-    z-index: 1000; /* Ensure it appears above other elements */
+    top: 20px;
+    left: 20px; 
+    color: white; 
+    font-size: 4rem; 
+    z-index: 1000; 
 }
 
+/* reset */
+.exit {
+    z-index: 100000; 
+    position: absolute; 
+    top: 20px; 
+    right: 40px; 
+    fill: #eee;
+    cursor: pointer;
+    padding: 10px;
+}
+.exit h2{
+    color: #eee;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+}
+.exit-icon{
+    position: absolute; 
+    top: 30px; 
+    right: 60px; 
+}
 
 
 
