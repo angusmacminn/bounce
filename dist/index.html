@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-BI7hk9eb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BXP2tdH9.css">
+</head>
+<body>
+    <section class="starting-screen" id="starting-screen">
+        <div class="title">
+            <h1>
+                Bounce!
+            </h1>
+        </div>
+        <div class="instructions">
+           <h2>
+                Welcome to Bounce! <br>
+                To play, press SPACE to begin bouncing, and hold down the W A S D keys to control the ball. <br>
+                Be careful, the longer you press a key, the further you will go!<br>
+                Try to get to the last platform as fast as you can! Good luck!
+           </h2>
+        </div>
+        <div class="start-button" id="start-button">
+            <a href="#">Play</a>
+        </div>
+    </section>
+
+    <section class="win-screen" id="win-screen">
+        <div class="congrats">
+            <h1>
+                Congratulations!
+            </h1>
+        </div>
+            <div class="completed">
+                <h2>
+                    You completed the game in
+                </h2>
+                <h2 class="final-time"> </h2>
+                <h2>
+                    Would you like to play again?
+                </h2>
+            </div>
+            <div class="play-again-button" id="play-again-button">
+                <a href="#">Play Again</a>
+            </div>
+    </section>
+
+    <div id="timer" class="timer">
+        Time: 0
+    </div>
+
+    <div id="exit" class="exit">
+        <h2>
+            Reset
+        </h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="exit-icon"> 
+            <path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/>
+        </svg>
+    </div>
+
+    <canvas class="webgl"></canvas>
+</body>
+</html>
