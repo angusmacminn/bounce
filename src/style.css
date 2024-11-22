@@ -63,6 +63,7 @@ h1 {
     cursor: pointer; /* Make it clear it’s clickable */
     margin: 0; /* Ensure no extra margin distorts positioning */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595);
+    transition: 300ms;
 }
 
 .start-button a {
@@ -70,6 +71,10 @@ h1 {
     text-decoration: none;
     padding: 1rem 1rem;
     color: #000;
+}
+.start-button:hover {
+    background-color: #d9534f; /* Darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 
@@ -121,6 +126,11 @@ h1 {
     text-decoration: none;
     color: #000;
     display: inline-block; /* Ensure it behaves like a button */
+}
+
+.play-again-button:hover {
+    background-color: #d9534f; /* Darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Timer */
