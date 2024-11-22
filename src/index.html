@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ball game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize-fwd.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="starting-screen" id="starting-screen">
+        <div class="title">
+            <h1>
+                Bounce!
+            </h1>
+        </div>
+        <div class="instructions">
+           <h2>
+                Welcome to Bounce! <br>
+                To play, press SPACE to begin bouncing, and hold down the W A S D keys to control the ball. <br>
+                Be careful, the longer you press a key, the further you will go!<br>
+                Try to get to the last platform as fast as you can! Good luck!
+           </h2>
+        </div>
+        <div class="start-button" id="start-button">
+            <a href="#">Play</a>
+        </div>
+    </section>
+
+    <section class="win-screen" id="win-screen">
+        <div class="congrats">
+            <h1>
+                Congratulations!
+            </h1>
+        </div>
+            <div class="completed">
+                <h2>
+                    You completed the game in
+                </h2>
+                <h2 class="final-time"> </h2>
+                <h2>
+                    Would you like to play again?
+                </h2>
+            </div>
+            <div class="play-again-button" id="play-again-button">
+                <a href="#">Play Again</a>
+            </div>
+    </section>
+
+    <div id="timer" class="timer">
+        Time: 0
+    </div>
+
+    <canvas class="webgl"></canvas>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

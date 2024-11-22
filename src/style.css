@@ -1,0 +1,146 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    font-family: "Outfit", sans-serif;
+    overflow: hidden;
+}
+
+/* typography */
+h1 {
+    font-family: "Outfit", sans-serif;
+    font-size: 3rem;
+}
+
+
+/* starting screen */
+
+.starting-screen {
+    position: fixed; /* Fixed positioning for better centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    z-index: 999;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: #ee7676de;
+    padding: 1rem; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 1rem; /* Add spacing between children */
+    /* display: none; Hidden by default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.588);
+}
+
+.title {
+    color: #eee;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.instructions {
+    color: #eee;
+    padding: 0 4rem;
+    text-align: center;
+    line-height: 3rem;
+    
+}
+
+.start-button {
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #eb5e5e;
+    padding: 0.5rem 1rem; /* Smaller padding */
+    width: auto; /* Prevent full-width stretching */
+    text-align: center;
+    cursor: pointer; /* Make it clear it’s clickable */
+    margin: 0; /* Ensure no extra margin distorts positioning */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.595);
+}
+
+.start-button a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    color: #000;
+}
+
+
+
+/* Win screen */
+.win-screen {
+    position: fixed; /* Fixed positioning for better centering */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    z-index: 999;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: #ee7676de;
+    padding: 4rem; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 1rem; /* Add spacing between children */
+    display: none; /* Hidden by default */
+}
+
+
+.congrats {
+    color: #eee;
+    text-align: center;
+    padding: 2rem 3rem;
+}
+
+.completed {
+    color: #eee;
+    text-align: center;
+    padding: 1rem 3rem;
+}
+
+.play-again-button {
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #eb5e5e;
+    padding: 0.5rem 1rem; /* Smaller padding */
+    width: auto; /* Prevent full-width stretching */
+    text-align: center;
+    cursor: pointer; /* Make it clear it’s clickable */
+    margin: 0; /* Ensure no extra margin distorts positioning */
+}
+
+.play-again-button a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+/* Timer */
+.timer {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    color: white; /* Text color */
+    font-size: 4rem; /* Font size */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+
+
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
