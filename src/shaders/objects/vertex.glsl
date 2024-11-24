@@ -88,16 +88,16 @@ void main()
     vNormal = normal;
     vUv = uv;
 
-  //quantize position for pixel noise
-  vec3 quantizedPosition = floor(position * uPixelation) / uPixelation;
-  vNoise = cnoise(quantizedPosition * uNoiseScale + uTime);
+    //quantize position for pixel noise
+    vec3 quantizedPosition = floor(position * uPixelation) / uPixelation;
+    vNoise = cnoise(quantizedPosition * uNoiseScale + uTime);
 
-  //displace vertex along normal based on noise
-  vec3 displacedPosition = position + normal * vNoise * 0.5;
+    //displace vertex along normal based on noise
+    vec3 displacedPosition = position + normal * vNoise * 0.5;
 
 
-  vPosition = displacedPosition;
-  vUv = uv;
+    vPosition = displacedPosition;
+    vUv = uv;
 
     //final position
     vec4 modelPosition = modelMatrix * vec4(position, 1.0);
