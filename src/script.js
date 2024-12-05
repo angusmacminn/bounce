@@ -95,7 +95,7 @@ const scene = new THREE.Scene()
 
 // Loaders
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture = textureLoader.load('./matcaps/3.png')
+const matcapTexture = textureLoader.load('./matcaps/2.png')
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 /**
@@ -159,7 +159,7 @@ sphereMesh.castShadow = true
 const sphereShape = new CANNON.Sphere(1)
 const sphereBody = new CANNON.Body({
     mass: 1,
-    position: new CANNON.Vec3(0, 1, 0), // change to 40, 1, 271 for easy mode
+    position: new CANNON.Vec3(0, 1, 0), // change to (40, 1, 271) for easy mode
     shape: sphereShape,
     material: defaultContactMaterial,
 })
@@ -257,7 +257,7 @@ document.addEventListener('keydown', (event) => {
     if (event.key in keys) {
         keys[event.key] = true
     }
-    // Add handling for arrow keys
+    // add handling for arrow keys
     if (event.key === 'ArrowUp') keys.up = true
     if (event.key === 'ArrowDown') keys.down = true
     if (event.key === 'ArrowLeft') keys.left = true
@@ -401,7 +401,7 @@ const tick = () =>
 
 
     // Apply WASD movement
-    const force = 5;
+    const force = 5
     // lowercase
     if (keys.w) sphereBody.applyForce(new CANNON.Vec3(0, 0, +force), sphereBody.position)
     if (keys.s) sphereBody.applyForce(new CANNON.Vec3(0, 0, -force), sphereBody.position)
